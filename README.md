@@ -19,7 +19,7 @@ This final year project showcases a **passwordless authentication system** using
 - **Flutter**: Mobile app (face/fingerprint capture)
 - **Flask**: Biometric verification backend (face & fingerprint templates)
 - **Veramo (Node.js)**: DID generation, IPFS upload, Ethereum smart contract
-- **Supabase**: User data store and authentication fallback
+- **Pinata**: IPFS Gateway for uploading files
 - **IPFS**: Stores biometric templates
 - **Sepolia Ethereum Testnet**: Anchors verification proofs
 
