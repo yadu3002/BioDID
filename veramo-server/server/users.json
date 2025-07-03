@@ -1,0 +1,32 @@
+[
+  {
+    "did": "did:ethr:sepolia:0x02692d5a5d621f2f9c205c6153e8d90e1d2637ab254c1c9e5cf736d5cf3cebcd09",
+    "name": "djsid",
+    "embeddingIpfsHash": "QmVFusH1WRf2vDFLRALVE78AnqXXRTQVSyg6ogJfsuJPSc",
+    "faceTemplateHash": "1e109d3a1193e807f8cbbec58673496ca6f16acb8de5bbed281c5efac4176f20",
+    "fingerprintIpfsHash": "QmQTQABijidn2p1k1Qw2c9bGX24f1resBCyxewBfWT1JHk",
+    "fingerprintHash": "e4c0b95477c366c7264a3d512dd8053ffbef789d8b4457120c24188c95d3fe5c",
+    "anchoredTx": "0xa0e08c793934ebd6eb9023280e0aab4c8110099f55ce3bddede4747f2f1ecdd9",
+    "createdAt": "2025-04-09T02:21:17.740Z"
+  },
+  {
+    "did": "did:ethr:sepolia:0x021603d2fe99eb790490c1f129afc7ea618c026e3624d4b6068c19feacbd1da268",
+    "name": "kimi",
+    "embeddingIpfsHash": "QmVE2N1YsEw8HHpH9rMZWpRwjokC5GApoojG7dc44AGvMA",
+    "faceTemplateHash": "0e0abb8afeddc339fbec866ca5abf8089b22aa0dfcd0c992d5f06bc03469f2f5",
+    "fingerprintIpfsHash": "QmYGRPC8cuAVCKUcQvg22K8kbWepJ988HmmqWYtvctyeN8",
+    "fingerprintHash": "b29094a0686ef7ab1fa556bb11186a7b6d8b6232930b73d5e9a7aaae1dd852c4",
+    "anchoredTx": "0x2d5649684b03aa2943439e08c15562cfb1a30575f8f14a5880469af2fcb58bee",
+    "createdAt": "2025-04-09T02:35:53.652Z"
+  },
+  {
+    "did": "did:ethr:sepolia:0x0300e227ca45676ec6b76d4facb5c2cb77577c2939e9c6bba5699f566f4d8c6fb2",
+    "name": "yadu",
+    "embeddingIpfsHash": "QmViPt65RvR6UzyFc8Mop9WmSTootHY8hnoQok1uDkXTc5",
+    "faceTemplateHash": "6490c90f3dfcb527b90fc153877905172fd148febf0e5d4aae48ae8cbe5a3717",
+    "fingerprintIpfsHash": "QmVcCgqjekANC7CVB5ycYKQDJRNEqVGLjohGCUYyLPHjci",
+    "fingerprintHash": "e4c0b95477c366c7264a3d512dd8053ffbef789d8b4457120c24188c95d3fe5c",
+    "anchoredTx": "0x1f8c446719b024e7a625b398927d6affc135f1c03d03ed23a8359e5996c83f13",
+    "createdAt": "2025-04-09T12:41:53.010Z"
+  }
+]

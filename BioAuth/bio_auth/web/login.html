@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Login Demo</title>
+  <script>
+    let sessionId = "";
+    async function generateQR() {
+      const response = await fetch('http://localhost:3000/generate-login-qr');
+      const data = await response.json();
+      sessionId = data.sessionId;
+      document.getElementById('qrImage').src = data.qrCode;
+      pollSession();
+    }
+
+    async function pollSession() {
+      const interval = setInterval(async () => {
+        const res = await fetch(`http://localhost:3000/check-session/${sessionId}`);
+        const data = await res.json();
+        if (data.status === 'authenticated') {
+          clearInterval(interval);
+          document.getElementById('status').innerText = `✅ Login successful! DID: ${data.did}`;
+          document.getElementById('qrImage').style.display = 'none';
+        } else {
+          console.log('Waiting for authentication...');
+        }
+      }, 2000);
+    }
+
+    window.onload = generateQR;
+  </script>
+</head>
+<body>
+  <h1>Scan the QR code below to login:</h1>
+  <img id="qrImage" src="" alt="QR code will appear here">
+  <h2 id="status">Waiting for login...</h2>
+</body>
+</html>

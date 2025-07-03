@@ -1,0 +1,12 @@
+[
+  {
+    "did": "did:ethr:sepolia:0x0300e227ca45676ec6b76d4facb5c2cb77577c2939e9c6bba5699f566f4d8c6fb2",
+    "name": "yadu",
+    "embeddingIpfsHash": "QmViPt65RvR6UzyFc8Mop9WmSTootHY8hnoQok1uDkXTc5",
+    "faceTemplateHash": "6490c90f3dfcb527b90fc153877905172fd148febf0e5d4aae48ae8cbe5a3717",
+    "fingerprintIpfsHash": "QmVcCgqjekANC7CVB5ycYKQDJRNEqVGLjohGCUYyLPHjci",
+    "fingerprintHash": "e4c0b95477c366c7264a3d512dd8053ffbef789d8b4457120c24188c95d3fe5c",
+    "anchoredTx": "0x1f8c446719b024e7a625b398927d6affc135f1c03d03ed23a8359e5996c83f13",
+    "createdAt": "2025-04-09T16:41:51.820282"
+  }
+]

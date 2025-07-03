@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 60px;
+    }
+    canvas {
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>Scan this QR code using the BioAuth mobile app</h2>
+  <canvas id="qrcode"></canvas>
+  <p id="status">Waiting for scan...</p>
+
+  <script>
+    const sessionId = Math.random().toString(36).substring(2);
+
+    // Create login session on backend
+    fetch('/api/create-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sessionId })
+    });
+
+    // Generate QR code from session ID
+    QRCode.toCanvas(document.getElementById('qrcode'), sessionId);
+
+    const status = document.getElementById('status');
+
+    // Poll session status
+    const interval = setInterval(async () => {
+      const res = await fetch(`/api/session-status/${sessionId}`);
+      const data = await res.json();
+
+      if (data.verified) {
+        clearInterval(interval);
+        status.innerText = "Login successful. Redirecting...";
+        setTimeout(() => {
+          window.location.href = `/result.html?session=${sessionId}`;
+        }, 1000);
+      }
+    }, 1500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Login Status</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #user-data {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Confirmation</h2>
+  <div id="user-data">
+    <p>Verifying session...</p>
+  </div>
+
+  <script>
+    const sessionId = new URLSearchParams(window.location.search).get('session');
+    const userData = document.getElementById('user-data');
+
+    fetch(`/api/session-status/${sessionId}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.verified && data.did) {
+          userData.innerHTML = `
+            <p><strong>DID:</strong> ${data.did}</p>
+            <p><strong>Status:</strong> Verified</p>
+          `;
+        } else {
+          userData.innerHTML = "<p>Session not verified or expired.</p>";
+        }
+      })
+      .catch(() => {
+        userData.innerHTML = "<p>Error fetching session data.</p>";
+      });
+  </script>
+</body>
+</html>
