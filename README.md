@@ -47,7 +47,7 @@ flutter pub get
 flutter run
 
 ```
-## Pre Requisities
+## Prerequisites
 - Must have an existing account through Pinata IPFS Gateway account
 - Must have a web wallet for Anchoring data through Sepolia (drip facuet available through https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - fingerprint dataset (available here https://www.kaggle.com/datasets/ruizgara/socofing)
